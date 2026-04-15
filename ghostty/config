@@ -1,0 +1,93 @@
+# Ghostty — Minimal & Clean
+
+# Font
+font-family = JetBrains Mono
+font-family = D2Coding
+font-size = 12
+font-thicken = false
+adjust-cell-width = -1
+
+# Theme — GitHub dark
+background = 0d1117
+foreground = e6edf3
+selection-background = 264f78
+selection-foreground = ffffff
+cursor-color = e6edf3
+
+# Subtle palette
+palette = 0=#1a1a1a
+palette = 1=#e06c75
+palette = 2=#98c379
+palette = 3=#d19a66
+palette = 4=#7aa2f7
+palette = 5=#c678dd
+palette = 6=#56b6c2
+palette = 7=#abb2bf
+palette = 8=#3a3a3a
+palette = 9=#e06c75
+palette = 10=#98c379
+palette = 11=#d19a66
+palette = 12=#7aa2f7
+palette = 13=#c678dd
+palette = 14=#56b6c2
+palette = 15=#eeeeee
+
+# Window — borderless, clean
+window-padding-x = 16
+window-padding-y = 12
+window-width = 120
+window-height = 35
+window-decoration = auto
+macos-titlebar-style = native
+window-theme = dark
+background-opacity = 0.92
+background-blur-radius = 20
+
+# No title, no tabs clutter
+window-save-state = never
+fullscreen = false
+confirm-close-surface = false
+
+# Cursor
+cursor-style = bar
+cursor-style-blink = false
+
+# Scrollback
+scrollback-limit = 100000
+
+# Keybindings
+keybind = super+t=new_tab
+# Split via Ghostty native (each split gets its own tmux session)
+keybind = super+d=new_split:down
+keybind = super+shift+d=new_split:right
+keybind = super+enter=toggle_fullscreen
+keybind = super+alt+left=goto_split:left
+keybind = super+alt+right=goto_split:right
+keybind = super+alt+up=goto_split:top
+keybind = super+alt+down=goto_split:bottom
+
+# Opt+Arrow → 단어 단위 커서 이동 (ESC b / ESC f)
+keybind = alt+left=text:\x1bb
+keybind = alt+right=text:\x1bf
+
+# Shift+Cmd+Arrow → 줄 처음/끝으로 이동
+keybind = super+shift+left=text:\x01
+keybind = super+shift+right=text:\x05
+
+# macOS-style delete behavior
+keybind = super+backspace=text:\x15
+keybind = alt+backspace=text:\x1b\x7f
+
+# Split divider
+window-padding-balance = true
+split-divider-color = #3a3a3a
+
+# Shell
+shell-integration = zsh
+
+# Input
+macos-option-as-alt = true
+
+# Misc
+copy-on-select = clipboard
+mouse-hide-while-typing = true
