@@ -91,3 +91,14 @@ macos-option-as-alt = true
 # Misc
 copy-on-select = clipboard
 mouse-hide-while-typing = true
+
+# Clipboard — Claude Code 이미지 paste / 드래그앤드롭 활성화
+clipboard-read = allow
+clipboard-write = allow
+clipboard-paste-protection = false
+clipboard-trim-trailing-spaces = true
+
+# Cmd+V → 일반 paste + 빈 bracketed paste 트리거 (Claude Code의 osascript 클립보드 검사 강제 발동)
+# image-only 클립보드일 때 ghostty가 paste 이벤트 자체를 안 보내는 문제 우회
+keybind = super+v=paste_from_clipboard
+keybind = chain=text:\x1b[200~\x1b[201~

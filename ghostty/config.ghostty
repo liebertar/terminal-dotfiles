@@ -1,0 +1,3 @@
+# Option 키로 Alt(Meta) 시퀀스를 보내도록 설정
+# 이렇게 하면 Option+Arrow로 단어 단위 이동 등이 작동함
+macos-option-as-alt = true

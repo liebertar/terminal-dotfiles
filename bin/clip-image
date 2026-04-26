@@ -1,0 +1,19 @@
+#!/bin/bash
+# Grab PNG from macOS clipboard → save to /tmp → print "/image <path>" for Claude Code
+set -euo pipefail
+
+if ! osascript -e 'clipboard info' 2>/dev/null | grep -q 'PNGf'; then
+  echo "no PNG on clipboard" >&2
+  exit 1
+fi
+
+TMPFILE="/tmp/clip-$(date +%s%N).png"
+
+osascript <<EOF >/dev/null
+set png to (the clipboard as «class PNGf»)
+set f to open for access POSIX file "$TMPFILE" with write permission
+write png to f
+close access f
+EOF
+
+printf '/image %s\n' "$TMPFILE"

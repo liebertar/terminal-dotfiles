@@ -1,6 +1,9 @@
 # Added by LM Studio CLI (lms) export PATH="$PATH:$HOME/.lmstudio/bin" # End of LM Studio CLI section
 alias pycharm='open -a "PyCharm"'
 
+# Paste clipboard PNG into Claude Code: prints "/image <tmpfile>" — pipe to pbcopy or paste manually
+alias cimg='clip-image | tee >(tr -d "\n" | pbcopy) && echo "→ copied to clipboard, paste into Claude Code"'
+
 # VS Code 'code' command → ~/.local/bin/code symlink 사용 (.app 직접 참조 제거 → TCC 팝업 방지)
 
 # Color output (TERM은 ghostty/tmux가 알아서 세팅하므로 건드리지 말 것)
